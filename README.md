@@ -31,31 +31,31 @@ Ensure UrlRewrite has been installed
 ## Useful packages
 
 AZURE
-https://docs.microsoft.com/en-us/javascript/azure/?view=azure-node-latest
-https://github.com/Azure/azure-storage-node
-https://github.com/MicrosoftTranslator/Text-Translation-API-V3-NodeJS
+ - https://docs.microsoft.com/en-us/javascript/azure/?view=azure-node-latest
+ - https://github.com/Azure/azure-storage-node
+ - https://github.com/MicrosoftTranslator/Text-Translation-API-V3-NodeJS
 
 SQL
-https://github.com/tediousjs/node-mssql
+ - https://github.com/tediousjs/node-mssql
 
 PDF
-https://github.com/bpampuch/pdfmake (server and client)
-    - Blog (https://medium.com/@kainikhil/nodejs-how-to-generate-and-properly-serve-pdf-6835737d118e)
+ - https://github.com/bpampuch/pdfmake (server and client)
+ - Blog (https://medium.com/@kainikhil/nodejs-how-to-generate-and-properly-serve-pdf-6835737d118e)
 
 CSV
-https://github.com/adaltas/node-csv
+ - https://github.com/adaltas/node-csv
 
 SMTP
-https://github.com/nodemailer/nodemailer (https://nodemailer.com/about/)
-https://github.com/yads/nodemailer-express-handlebars (https://handlebarsjs.com/builtin_helpers.html)
+ - https://github.com/nodemailer/nodemailer (https://nodemailer.com/about/)
+ - https://github.com/yads/nodemailer-express-handlebars (https://handlebarsjs.com/builtin_helpers.html)
 
 FILE UPLOAD
-https://github.com/richardgirges/express-fileupload
+ - https://github.com/richardgirges/express-fileupload
 
 ZIP FILES
-https://github.com/archiverjs/node-archiver
+ - https://github.com/archiverjs/node-archiver
 
 
 ## Useful Links
 
-https://randomkeygen.com/
+ - https://randomkeygen.com/
