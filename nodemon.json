@@ -1,0 +1,7 @@
+{
+    "env":{
+        "MODE": "Development",
+        "JWT_KEY": "9uMRElB:w{'o3t|.1ztnLWVm{Y[`|!",
+        "JWT_DURATION" : "1h"
+    }
+}

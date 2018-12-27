@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node.js RESTful Service</title>
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="alert alert-info">
+                    This is a Node.js RESTful web service. No data is stored.
+                </div>
+                <!-- Account -->
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
+
+                    <h6 class="border-bottom border-gray pb-2 mb-0">Account</h6>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark"><i class="fas fa-lock"></i> GET /api/account</strong>
+                            Returns account data
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">POST /api/account/register</strong> Sends email to
+                            confirm registration
+                            <br>
+                            Body <code>
+                                {
+                                email: string,
+                                name: string
+                                password: string,
+                                confirmPassword: string
+                                }
+                            </code>
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">POST /api/account/login</strong> Returns jwt
+                            <br>
+                            Body <code>
+                                {
+                                email: string,
+                                password: string
+                                }
+                            </code>
+                        </p>
+                    </div>
+
+                </div>
+                <!-- Orders -->
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
+                    <h6 class="border-bottom border-gray pb-2 mb-0">Orders</h6>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark"><i class="fas fa-lock"></i> GET /api/orders</strong>
+                            Returns all orders
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">GET /api/orders/:orderId</strong> Returns order by
+                            Id
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark"><i class="fas fa-file"></i> POST /api/orders
+                                (FormData)</strong> Post data with
+                            file
+                            <br>
+                            Body <code>
+                                {
+                                productId: int,
+                                quantity: int,
+                                hasFile: string ('true' || 'false')
+                                }
+                            </code>
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">POST /api/orders/pdf</strong> Returns a pdf
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">POST /api/orders/zip</strong> Returns a zip file
+                        </p>
+                    </div>
+                    <div class="media text-muted pt-3">
+                        <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+                        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                            <strong class="d-block text-gray-dark">DELETE /api/orders/:orderId</strong> Returns message
+                            with Id
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
